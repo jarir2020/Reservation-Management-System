@@ -13,20 +13,20 @@
 				
 				echo form_open_multipart('ordermanage/order/addsound','class="form-inner"') ?>
                     <?php echo form_hidden('id',$soundsetting->soundid) ?>
-                    <!-- if setting favicon is already uploaded -->
-                    <?php if(!empty($soundsetting->nofitysound)) {  ?>
+                    <!-- if notify sound is uploaded -->
                     <div class="form-group row">
-                        <label for="faviconPreview" class="col-xs-3 col-form-label"></label>
+                        <label for="notifyAudioPreview" class="col-xs-3 col-form-label"><?php echo display('upload_notify') ?></label>
                         <div class="col-xs-9">
-                            <img src="<?php echo base_url($soundsetting->nofitysound) ?>" alt="Notify Sound" class="img-thumbnail" />
+                            <audio id="notifyAudioPreview" controls <?php if(empty($soundsetting->nofitysound)){ echo 'style="display:none;"'; } ?> src="<?php echo !empty($soundsetting->nofitysound) ? base_url($soundsetting->nofitysound) : '' ?>">
+                                Your browser does not support the audio element.
+                            </audio>
                         </div>
                     </div>
-                    <?php } ?>
 
                     <div class="form-group row">
-                        <label for="favicon" class="col-xs-3 col-form-label"><?php echo display('upload_notify') ?> </label>
+                        <label for="notifysound" class="col-xs-3 col-form-label"><?php echo display('upload_notify') ?> </label>
                         <div class="col-xs-9">
-                            <input type="file" name="notifysound" id="notifysound">
+                            <input type="file" name="notifysound" id="notifysound" accept="audio/*">
                             <input type="hidden" name="old_notifysound" value="<?php echo $soundsetting->nofitysound ?>">
                         </div>
                     </div>
@@ -38,3 +38,22 @@
         </div>
     </div>
 </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var fileInput = document.getElementById('notifysound');
+    var audioPlayer = document.getElementById('notifyAudioPreview');
+
+    if (fileInput && audioPlayer) {
+        fileInput.addEventListener('change', function(event) {
+            var file = event.target.files[0];
+            if (file) {
+                var objectUrl = URL.createObjectURL(file);
+                audioPlayer.src = objectUrl;
+                audioPlayer.style.display = 'block';
+                audioPlayer.load();
+            }
+        });
+    }
+});
+</script>
