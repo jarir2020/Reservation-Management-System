@@ -4,16 +4,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 @ini_set('max_execution_time', 400);
 @ini_set("allow_url_fopen", 1);
 
-//Get Update file
-define('MIN_VERSION', file_get_contents('https://update.bdtask.com/bhojon/autoupdate/update_min_version'));
-//Get Update file
-define('MAX_VERSION', file_get_contents('https://update.bdtask.com/bhojon/autoupdate/update_max_version'));
-
-//Get Update file
-define('UPDATE_URL','https://update.bdtask.com/bhojon/autoupdate');
-// Get latest version info
-define('UPDATE_INFO_URL','https://update.bdtask.com/bhojon/autoupdate/update_info');
-// CRM temporary path
+// Default static version constants
+defined('MIN_VERSION') OR define('MIN_VERSION', '1.0');
+defined('MAX_VERSION') OR define('MAX_VERSION', '9.9');
+defined('UPDATE_URL') OR define('UPDATE_URL', '');
+defined('UPDATE_INFO_URL') OR define('UPDATE_INFO_URL', '');
 define('TEMP_FOLDER', FCPATH .'temp' . '/');
 
 class Autoupdate extends MX_Controller {
