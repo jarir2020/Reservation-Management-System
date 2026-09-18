@@ -172,11 +172,17 @@ class Module extends MX_Controller
                         $n_query = explode(";", $n_query);
                         $i = 0;
                         foreach ($n_query as $sql) {
-                            if (!$this->db->table_exists($succe[$i++])) {
+                            $sql = trim($sql);
+                            if (empty($sql)) {
+                                continue;
+                            }
+                            $table_name = isset($succe[$i]) ? $succe[$i] : null;
+                            if (!$table_name || !$this->db->table_exists($table_name)) {
                                 $this->db->query("SET FOREIGN_KEY_CHECKS = 0");
                                 $this->db->query($sql);
                                 $this->db->query("SET FOREIGN_KEY_CHECKS = 1");
                             }
+                            $i++;
                         }
 
                         /*----------ADD TO MODULE ------------*/
