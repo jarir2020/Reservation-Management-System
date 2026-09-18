@@ -23,16 +23,19 @@ class Autoupdate extends MX_Controller {
 		$this->db->query('SET SESSION sql_mode = ""');
 	
 	}
-	 public function index(){ 
+	    public function index(){ 
 
         $data = array();
 
-        $data['latest_version']  = file_get_contents(UPDATE_INFO_URL);
+        $data['latest_version']  = (!empty(UPDATE_INFO_URL)) ? @file_get_contents(UPDATE_INFO_URL) : $this->current_version();
+        if (empty($data['latest_version'])) {
+            $data['latest_version'] = $this->current_version();
+        }
         $data['current_version'] = $this->current_version();
 
         //Checking update available or not
         if ($data['current_version']==$data['latest_version']) {
-            //Your Message
+            $data['message_txt'] = '<i class="fa fa-check-circle" aria-hidden="true"></i> You are using the latest version.';
         }
         //compatible version 
         else if ($data['current_version'] >= MIN_VERSION && $data['current_version'] <= MAX_VERSION) {
@@ -45,8 +48,6 @@ class Autoupdate extends MX_Controller {
 		$data['module'] = "dashboard"; 
 		$data['page']   = "autoupdate/autoupdate";  
 		echo Modules::run('template/layout', $data); 
-
-      
 
     }
     public function checkserver(){
@@ -65,7 +66,10 @@ class Autoupdate extends MX_Controller {
         $purchase_key   = $this->input->post('purchase_key', false);      
         $purchase_key   = trim($purchase_key);
 		$version   = $this->input->post('version', false); 
-        $latest_version = file_get_contents(UPDATE_INFO_URL);
+        $latest_version = (!empty(UPDATE_INFO_URL)) ? @file_get_contents(UPDATE_INFO_URL) : $this->current_version();
+        if (empty($latest_version)) {
+            $latest_version = $this->current_version();
+        }
         $url            = UPDATE_URL;
 
         $this->form_validation->set_rules('purchase_key', 'message','required|max_length[100]|trim');
