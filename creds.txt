@@ -1,0 +1,63 @@
+==================================================
+RESERVATION & RESTAURANT MANAGEMENT SYSTEM CREDENTIALS
+==================================================
+
+Default Password for all Demo Accounts: demo123
+
+==================================================
+1. ADMIN & STAFF PORTAL
+==================================================
+Portal URL: http://127.0.0.1:8000/login
+
+--------------------------------------------------
+A. Admin (Full System Management)
+--------------------------------------------------
+Email:    demo.admin@example.com
+Password: demo123
+Type:     Admin / Superuser (is_admin = 1)
+
+--------------------------------------------------
+B. Kitchen Staff
+--------------------------------------------------
+Email:    demo.kitchen@example.com
+Password: demo123
+Role:     kitchen (manage kitchen & order preparation)
+
+--------------------------------------------------
+C. Counter / Cashier Staff
+--------------------------------------------------
+Email:    demo.counter@example.com
+Password: demo123
+Role:     Counter (display & order timing management)
+
+--------------------------------------------------
+D. Waiter Staff
+--------------------------------------------------
+Email:    demo.waiter@example.com
+Password: demo123
+Role:     Waiter (order taking & food serving)
+
+==================================================
+2. CUSTOMER WEB PORTAL
+==================================================
+Portal URL: http://127.0.0.1:8000/mylogin
+
+--------------------------------------------------
+A. Demo Customer
+--------------------------------------------------
+Email:    demo.customer@example.com
+Password: demo123
+Type:     Customer Portal User
+
+--------------------------------------------------
+B. Existing Customer
+--------------------------------------------------
+Email:    kabir@gmail.com
+Password: demo123
+
+==================================================
+EXISTING ORIGINAL SYSTEM CREDENTIALS
+==================================================
+Admin Portal URL: http://127.0.0.1:8000/login
+Admin Email:      admin@example.com
+Password:         12345

@@ -1,0 +1,17 @@
+# Reservation & Restaurant Management System
+
+> Comprehensive PHP CodeIgniter Restaurant & Reservation Management Web Application
+
+## Core Information
+- **Language & Framework**: PHP (CodeIgniter 3.x)
+- **Database Engine**: MySQL (`elitede1_rest`)
+- **Key Modules**: Reservation, Order Management, POS, Kitchen Display, Counter Display, Waiter POS, Customer Web Portal
+
+## Setup & Running
+- **Launch Script**: `./start.sh`
+- **Local URL**: `http://127.0.0.1:8000`
+- **Database Dump**: `database/elitede1_rest.sql`
+
+## Credentials Reference
+- **Demo Credentials File**: `creds.txt`
+

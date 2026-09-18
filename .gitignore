@@ -1,0 +1,3 @@
+.env
+application/cache/temp/*
+!application/cache/temp/index.html
