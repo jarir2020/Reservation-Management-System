@@ -1,6 +1,8 @@
 <?php 
 $flash_message = $this->session->flashdata('message');
-if ($flash_message) { ?>
+if ($flash_message) { 
+    $this->session->unset_userdata('message');
+?>
 <script>
  setTimeout(function () {
         toastr.options = {
@@ -18,7 +20,9 @@ if ($flash_message) { ?>
 <?php } ?>
 <?php 
 $flash_exception = $this->session->flashdata('exception');
-if ($flash_exception) { ?>
+if ($flash_exception) { 
+    $this->session->unset_userdata('exception');
+?>
 <script>
  setTimeout(function () {
         toastr.options = {
