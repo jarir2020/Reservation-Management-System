@@ -65,7 +65,7 @@ function current_version(){
     <span class="top-fixed-link">
     <?php 
 	if($this->permission->method('itemmanage','create')->access()){ 
-	if(($title=='Home') || ($title2=='dashboard')){
+    if(($title=='Home') || (isset($title2) && $title2=='dashboard')){
 	?>
 <a href="<?php echo base_url("ordermanage/order/pos_invoice") ?>" class="btn btn-success btn-outline"><i class="fa fa-plus"></i> <?php echo display('pos_invoice') ?></a>
 <a href="<?php echo base_url("ordermanage/order/orderlist") ?>" class="btn btn-success btn-outline"><i class="fa fa-list"></i> <?php echo display('order_list') ?></a>

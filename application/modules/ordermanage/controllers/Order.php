@@ -5522,7 +5522,7 @@ class Order extends MX_Controller {
 		} 
 		$data['allcounter']=$list;
 		if(empty($checkuser)){
-			if($openamount->closing_balance>'0.000'){
+			if(!empty($openamount) && isset($openamount->closing_balance) && $openamount->closing_balance > '0.000'){
 				$data['openingbalance']=$openamount->closing_balance;
 			}
 			else{

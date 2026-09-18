@@ -2,7 +2,7 @@
 <script src="<?php echo base_url();?>assets/js/jquery.validate.min.js" type="text/javascript"></script>
 <script src="<?php echo base_url('application/modules/ordermanage/assets/js/postop.js'); ?>" type="text/javascript"></script>
 <?php 
- (int)$new_version  = file_get_contents('https://update.bdtask.com/bhojon/autoupdate/update_info');
+ (int)$new_version  = @file_get_contents('https://update.bdtask.com/bhojon/autoupdate/update_info');
   $myversion = current_version();
 function current_version(){
 
