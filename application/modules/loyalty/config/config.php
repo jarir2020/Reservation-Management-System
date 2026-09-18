@@ -8,3 +8,4 @@ $HmvcConfig['loyalty']["_tables"]   = array(
 	'tbl_loyalty_setting'
 );
 $HmvcConfig['loyalty']["_extra_query"] = true;
+

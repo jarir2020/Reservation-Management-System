@@ -6,3 +6,4 @@ CREATE TABLE IF NOT EXISTS `tbl_waste_records` (
   `waste_date` date NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+

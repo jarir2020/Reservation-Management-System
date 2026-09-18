@@ -8,3 +8,4 @@ $HmvcConfig['razorpay']["_tables"]   = array(
 	'tbl_razorpay_setting'
 );
 $HmvcConfig['razorpay']["_extra_query"] = true;
+

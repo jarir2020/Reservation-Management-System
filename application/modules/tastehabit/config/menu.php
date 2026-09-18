@@ -9,3 +9,4 @@
         <li class="treeview"><a href="<?php echo base_url('tastehabit/tastehabit/taste_list') ?>"><i class="fa fa-hand-o-right"></i><span>Customer Habits</span></a></li>
     </ul>
 </li>
+

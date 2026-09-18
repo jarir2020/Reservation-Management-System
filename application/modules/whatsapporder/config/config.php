@@ -8,3 +8,4 @@ $HmvcConfig['whatsapporder']["_tables"]   = array(
 	'tbl_whatsapp_setting'
 );
 $HmvcConfig['whatsapporder']["_extra_query"] = true;
+

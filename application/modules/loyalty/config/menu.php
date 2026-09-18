@@ -9,3 +9,4 @@
         <li class="treeview"><a href="<?php echo base_url('loyalty/loyalty/setting') ?>"><i class="fa fa-hand-o-right"></i><span>Points Setting</span></a></li>
     </ul>
 </li>
+

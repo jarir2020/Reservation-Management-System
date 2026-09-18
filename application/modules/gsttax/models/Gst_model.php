@@ -6,3 +6,4 @@ class Gst_model extends CI_Model {
         return $this->db->get_where('tbl_gst_setting', array('id' => 1))->row();
     }
 }
+

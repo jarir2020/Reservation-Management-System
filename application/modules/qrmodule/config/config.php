@@ -8,3 +8,4 @@ $HmvcConfig['qrmodule']["_tables"]   = array(
 	'tbl_qr_tables'
 );
 $HmvcConfig['qrmodule']["_extra_query"] = true;
+

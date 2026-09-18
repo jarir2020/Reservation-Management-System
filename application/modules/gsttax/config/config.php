@@ -8,3 +8,4 @@ $HmvcConfig['gsttax']["_tables"]   = array(
 	'tbl_gst_setting'
 );
 $HmvcConfig['gsttax']["_extra_query"] = true;
+

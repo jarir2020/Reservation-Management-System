@@ -6,3 +6,4 @@ class Taste_model extends CI_Model {
         return $this->db->get('tbl_customer_taste_habits')->result();
     }
 }
+

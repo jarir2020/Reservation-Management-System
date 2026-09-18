@@ -9,3 +9,4 @@
         <li class="treeview"><a href="<?php echo base_url('shiftmanagement/shiftmanagement/shift_list') ?>"><i class="fa fa-hand-o-right"></i><span>Shift Roster</span></a></li>
     </ul>
 </li>
+

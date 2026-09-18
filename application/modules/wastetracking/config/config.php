@@ -8,3 +8,4 @@ $HmvcConfig['wastetracking']["_tables"]   = array(
 	'tbl_waste_records'
 );
 $HmvcConfig['wastetracking']["_extra_query"] = true;
+

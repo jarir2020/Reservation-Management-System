@@ -15,3 +15,4 @@ class Qrmodule extends MX_Controller {
         echo Modules::run('template/layout', $data);
     }
 }
+

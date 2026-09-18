@@ -15,3 +15,4 @@ class Wastetracking extends MX_Controller {
         echo Modules::run('template/layout', $data);
     }
 }
+

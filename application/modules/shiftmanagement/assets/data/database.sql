@@ -6,3 +6,4 @@ CREATE TABLE IF NOT EXISTS `tbl_shifts` (
   `status` tinyint(1) NOT NULL DEFAULT 1,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+

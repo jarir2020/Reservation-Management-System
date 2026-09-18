@@ -8,3 +8,4 @@ $HmvcConfig['shiftmanagement']["_tables"]   = array(
 	'tbl_shifts'
 );
 $HmvcConfig['shiftmanagement']["_extra_query"] = true;
+

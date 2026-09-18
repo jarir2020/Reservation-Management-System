@@ -8,3 +8,4 @@ $HmvcConfig['tastehabit']["_tables"]   = array(
 	'tbl_customer_taste_habits'
 );
 $HmvcConfig['tastehabit']["_extra_query"] = true;
+

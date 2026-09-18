@@ -9,3 +9,4 @@
         <li class="treeview"><a href="<?php echo base_url('wastetracking/wastetracking/waste_list') ?>"><i class="fa fa-hand-o-right"></i><span>Waste Records</span></a></li>
     </ul>
 </li>
+

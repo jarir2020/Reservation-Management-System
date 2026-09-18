@@ -9,3 +9,4 @@
         <li class="treeview"><a href="<?php echo base_url('qrmodule/qrmodule/qrlist') ?>"><i class="fa fa-hand-o-right"></i><span>QR Table Codes</span></a></li>
     </ul>
 </li>
+
