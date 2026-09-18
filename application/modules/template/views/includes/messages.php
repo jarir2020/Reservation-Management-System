@@ -1,4 +1,6 @@
-<?php if ($this->session->flashdata('message')) { ?>
+<?php 
+$flash_message = $this->session->flashdata('message');
+if ($flash_message) { ?>
 <script>
  setTimeout(function () {
         toastr.options = {
@@ -8,13 +10,15 @@
             timeOut: 4000
                    
         };
-        toastr.success('<?php echo $this->session->flashdata('message') ?>', 'Success');
+        toastr.success('<?php echo $flash_message ?>', 'Success');
 
     }, 1300);
 </script>
 
 <?php } ?>
-<?php if ($this->session->flashdata('exception')) { ?>
+<?php 
+$flash_exception = $this->session->flashdata('exception');
+if ($flash_exception) { ?>
 <script>
  setTimeout(function () {
         toastr.options = {
@@ -24,7 +28,7 @@
             timeOut: 4000
                   
         };
-        toastr.error('<?php echo $this->session->flashdata('exception') ?>', 'Something Wrong');
+        toastr.error('<?php echo $flash_exception ?>', 'Something Wrong');
 
     }, 1300);
 </script>
