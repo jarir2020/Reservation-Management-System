@@ -33,3 +33,4 @@ function load_env($filePath) {
 
 // Load .env file from project root
 load_env(FCPATH . '.env');
+
